@@ -23,7 +23,7 @@ import emailNewsletter from '@/assets/examples/email-newsletter.jpg';
 export const servicesData = {
   softwareWebRetail: {
     webApps: {
-      title: 'Web Applications',
+      title: 'Web Applications-Demo',
       examples: [
         {
           title: 'Smart School ERP',
@@ -42,7 +42,7 @@ export const servicesData = {
   },
   softwareMobileAI: {
     mobileApps: {
-      title: 'Mobile Applications',
+      title: 'Mobile Applications-Demo',
       examples: [
         {
           title: 'Food Delivery App',
@@ -59,7 +59,7 @@ export const servicesData = {
       ],
     },
     chatbots: {
-      title: 'AI Chatbots',
+      title: 'AI Chatbots-Demo',
       examples: [
         {
           title: 'Customer Support Bot',
@@ -78,7 +78,7 @@ export const servicesData = {
   },
   softwareDBMS: {
     dbms: {
-      title: 'Database Management',
+      title: 'Database Management-Demo',
       examples: [
         {
           title: 'Inventory Management',
@@ -97,7 +97,7 @@ export const servicesData = {
   },
   softwareAutomation: {
     automation: {
-      title: 'Automation Tools',
+      title: 'Automation Tools-Demo',
       examples: [
         {
           title: 'Invoice Generator',
@@ -116,7 +116,7 @@ export const servicesData = {
   },
   digital: {
     festivalPosts: {
-      title: 'Festival Posts',
+      title: 'Festival Posts-Demo',
       examples: [
         {
           title: 'Diwali Greeting Post',
@@ -133,7 +133,7 @@ export const servicesData = {
       ],
     },
     businessPosts: {
-      title: 'Business Posts',
+      title: 'Business Posts-Demo',
       examples: [
         {
           title: 'Business Offer Template',
@@ -152,7 +152,7 @@ export const servicesData = {
   },
   branding: {
     logos: {
-      title: 'Logo Design',
+      title: 'Logo Design-Demo',
       examples: [
         {
           title: '3D Lettermark Logo',
@@ -169,7 +169,7 @@ export const servicesData = {
       ],
     },
     brochures: {
-      title: 'Brochures',
+      title: 'Brochures-Demo',
       examples: [
         {
           title: 'Corporate Brochure',
@@ -188,7 +188,7 @@ export const servicesData = {
   },
   marketing: {
     socialMedia: {
-      title: 'Social Media Management',
+      title: 'Social Media Management-Demo',
       examples: [
         {
           title: 'Instagram Ad Campaign',
@@ -205,7 +205,7 @@ export const servicesData = {
       ],
     },
     emailCampaigns: {
-      title: 'Email Campaigns',
+      title: 'Email Campaigns-Demo',
       examples: [
         {
           title: 'Welcome Email Series',
