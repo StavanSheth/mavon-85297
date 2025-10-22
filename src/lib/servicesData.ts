@@ -114,41 +114,22 @@ export const servicesData = {
       ],
     },
   },
-  // digital: {
-  //   festivalPosts: {
-  //     title: 'Festival Posts-Demo',
-  //     examples: [
-  //       {
-  //         title: 'Diwali Greeting Post',
-  //         description: 'Beautiful festival greeting with traditional design elements.',
-  //         image: festivalDiwali,
-  //         demoUrl: 'https://www.instagram.com/p/DQGESoAD0vI/?igsh=MWF1OGxhMG9rM3k0bw==' ,
-  //       },
-  //       {
-  //         title: 'New Year Celebration',
-  //         description: 'Modern new year greeting with animated elements.',
-  //         image: festivalDiwali,
-  //         demoUrl: 'REPLACE_WITH_URL_NEWYEAR',
-  //       },
-  //     ],
-  //   },
-  // },
 
   digital: {
     festivalPosts: {
       title: 'Festival Posts-Demo',
       examples: [
         {
-          title: 'Diwali Greeting Post',
+          title: 'Holi Greeting Post',
           description: 'Beautiful festival greeting with traditional design elements.',
           image: festivalDiwali,
           demoUrl: 'https://www.instagram.com/p/DQGESoAD0vI/?igsh=MWF1OGxhMG9rM3k0bw==',
         },
         {
-          title: 'New Year Celebration',
-          description: 'Modern new year greeting with animated elements.',
+          title: 'Dhanteras Celebration',
+          description: 'Modern greeting with animated elements.',
           image: festivalDiwali,
-          demoUrl: 'REPLACE_WITH_URL_NEWYEAR',
+          demoUrl: 'https://www.instagram.com/p/DQFC1EWDLpu/?igsh=MW5pdDQxb3FnY2Q5YQ==',
         },
       ],
     },
@@ -156,16 +137,16 @@ export const servicesData = {
       title: 'Business Posts-Demo',
       examples: [
         {
-          title: 'Business Offer Template',
-          description: 'Eye-catching promotional post for special offers.',
+          title: 'Festival Greeting Post',
+          description: 'Green-Edge Organics Pongal Festival Post Eye catching promotional post.',
           image: businessOffer,
           demoUrl: 'REPLACE_WITH_URL_OFFER',
         },
         {
           title: 'Product Launch Post',
-          description: 'Professional product announcement design.',
+          description: 'QuickMed-Professional product announcement design.',
           image: businessOffer,
-          demoUrl: 'REPLACE_WITH_URL_PRODUCT',
+          demoUrl: 'https://www.instagram.com/reel/DQFCkfJDBDS/?igsh=MWhjeG01cnNrZ2VmMg==',
         },
       ],
     },
@@ -182,9 +163,9 @@ export const servicesData = {
         },
         {
           title: 'Mascot Logo',
-          description: 'Friendly character-based brand identity.',
+          description: 'Toyverse- Friendly character-based brand identity.',
           image: logo3d,
-          demoUrl: 'REPLACE_WITH_URL_MASCOT',
+          demoUrl: 'https://www.instagram.com/p/DQFCuhSDCVg/?igsh=MXRubmx3bzZrODRyaw==',
         },
       ],
     },
@@ -199,9 +180,9 @@ export const servicesData = {
         },
         {
           title: 'Product Catalog',
-          description: 'Interactive product showcase with specifications.',
+          description: 'Ecovia Living- Interactive product showcase with specifications.',
           image: brochureFlipbook,
-          demoUrl: 'REPLACE_WITH_URL_CATALOG',
+          demoUrl: 'https://www.instagram.com/p/DQFB-FeDHo7/?igsh=emQ3MXVpMXVsY2V1',
         },
       ],
     },
