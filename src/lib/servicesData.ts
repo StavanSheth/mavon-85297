@@ -122,7 +122,7 @@ export const servicesData = {
           title: 'Diwali Greeting Post',
           description: 'Beautiful festival greeting with traditional design elements.',
           image: festivalDiwali,
-          demoUrl: festivalDiwali,
+          demoUrl: https://www.instagram.com/p/DQGESoAD0vI/?igsh=MWF1OGxhMG9rM3k0bw== ,
         },
         {
           title: 'New Year Celebration',
