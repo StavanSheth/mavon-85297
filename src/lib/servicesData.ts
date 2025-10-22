@@ -114,45 +114,45 @@ export const servicesData = {
       ],
     },
   },
+  // digital: {
+  //   festivalPosts: {
+  //     title: 'Festival Posts-Demo',
+  //     examples: [
+  //       {
+  //         title: 'Diwali Greeting Post',
+  //         description: 'Beautiful festival greeting with traditional design elements.',
+  //         image: festivalDiwali,
+  //         demoUrl: 'https://www.instagram.com/p/DQGESoAD0vI/?igsh=MWF1OGxhMG9rM3k0bw==' ,
+  //       },
+  //       {
+  //         title: 'New Year Celebration',
+  //         description: 'Modern new year greeting with animated elements.',
+  //         image: festivalDiwali,
+  //         demoUrl: 'REPLACE_WITH_URL_NEWYEAR',
+  //       },
+  //     ],
+  //   },
+  // },
+
   digital: {
     festivalPosts: {
       title: 'Festival Posts-Demo',
       examples: [
-        {
-          title: 'Diwali Greeting Post',
-          description: 'Beautiful festival greeting with traditional design elements.',
-          image: festivalDiwali,
-          demoUrl: 'https://www.instagram.com/p/DQGESoAD0vI/?igsh=MWF1OGxhMG9rM3k0bw==' ,
-        },
-        {
-          title: 'New Year Celebration',
-          description: 'Modern new year greeting with animated elements.',
-          image: festivalDiwali,
-          demoUrl: 'REPLACE_WITH_URL_NEWYEAR',
-        },
-      ],
-    },
+      {
+        title: 'Diwali Greeting Post',
+        description: 'Beautiful festival greeting with traditional design elements.',
+        image: festivalDiwali,
+        demoUrl: 'https://www.instagram.com/p/DQGESoAD0vI/?igsh=MWF1OGxhMG9rM3k0bw==',
+      },
+      {
+        title: 'New Year Celebration',
+        description: 'Modern new year greeting with animated elements.',
+        image: festivalDiwali,
+        demoUrl: 'REPLACE_WITH_URL_NEWYEAR'
+      }, // ✅ Removed trailing comma here
+    ],
   },
-
-//   digital: {
-//     festivalPosts: {
-//       title: 'Festival Posts-Demo',
-//       examples: [
-//       {
-//         title: 'Diwali Greeting Post',
-//         description: 'Beautiful festival greeting with traditional design elements.',
-//         image: festivalDiwali,
-//         demoUrl: 'https://www.instagram.com/p/DQGESoAD0vI/?igsh=MWF1OGxhMG9rM3k0bw==',
-//       },
-//       {
-//         title: 'New Year Celebration',
-//         description: 'Modern new year greeting with animated elements.',
-//         image: festivalDiwali,
-//         demoUrl: 'REPLACE_WITH_URL_NEWYEAR'
-//       }, // ✅ Removed trailing comma here
-//     ],
-//   },
-// },
+},
 
     businessPosts: {
       title: 'Business Posts-Demo',
