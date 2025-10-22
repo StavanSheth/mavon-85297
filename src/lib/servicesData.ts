@@ -187,24 +187,6 @@ export const servicesData = {
       ],
     },
   },
-   Business_cards: {
-      title: 'Business Cards',
-      examples: [
-        {
-          title: 'Corporate Cards',
-          description: 'Nexora Dynamics-Liam Carter',
-          image: ,
-          demoUrl: 'https://www.instagram.com/p/DQFBx7mjBbO/?igsh=MW9lN3Zkd25qMDFyeQ==',
-        },
-        {
-          title: 'Business Cards',
-          description: 'Borcelle Cafe',
-          image: ,
-          demoUrl: ' https://www.instagram.com/p/DQFNNw6DPCm/?igsh=MTQ5MTRheTV5MGk0OA==',
-        },
-      ],
-    },
-  },
   marketing: {
     socialMedia: {
       title: 'Social Media Management-Demo',
