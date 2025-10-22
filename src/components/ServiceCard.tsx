@@ -10,7 +10,7 @@ interface ServiceCardProps {
     image: string;
     demoUrl: string;
   };
-  color: 'software' | 'digital' | 'branding' | 'marketing';
+  color: 'software' | 'digital' | 'digital2' | 'branding' | 'branding2' | 'marketing' | 'marketing2';
   liteMode: boolean;
 }
 
@@ -51,6 +51,15 @@ const ServiceCard = ({ example, color, liteMode }: ServiceCardProps) => {
         shadow: 'group-hover:shadow-[0_8px_30px_hsl(var(--service-digital)/0.4)]',
         ring: 'ring-service-digital/50',
       },
+      digital2: {
+        overlay: 'bg-service-digital/40',
+        icon: 'bg-service-digital',
+        text: 'text-service-digital',
+        glow: 'text-service-digital-glow',
+        particle: 'bg-service-digital-glow',
+        shadow: 'group-hover:shadow-[0_8px_30px_hsl(var(--service-digital)/0.4)]',
+        ring: 'ring-service-digital/50',
+      },
       branding: {
         overlay: 'bg-service-branding/40',
         icon: 'bg-service-branding',
@@ -60,7 +69,25 @@ const ServiceCard = ({ example, color, liteMode }: ServiceCardProps) => {
         shadow: 'group-hover:shadow-[0_8px_30px_hsl(var(--service-branding)/0.4)]',
         ring: 'ring-service-branding/50',
       },
+      branding2: {
+        overlay: 'bg-service-branding/40',
+        icon: 'bg-service-branding',
+        text: 'text-service-branding',
+        glow: 'text-service-branding-glow',
+        particle: 'bg-service-branding-glow',
+        shadow: 'group-hover:shadow-[0_8px_30px_hsl(var(--service-branding)/0.4)]',
+        ring: 'ring-service-branding/50',
+      },
       marketing: {
+        overlay: 'bg-service-marketing/40',
+        icon: 'bg-service-marketing',
+        text: 'text-service-marketing',
+        glow: 'text-service-marketing-glow',
+        particle: 'bg-service-marketing-glow',
+        shadow: 'group-hover:shadow-[0_8px_30px_hsl(var(--service-marketing)/0.4)]',
+        ring: 'ring-service-marketing/50',
+      },
+      marketing2: {
         overlay: 'bg-service-marketing/40',
         icon: 'bg-service-marketing',
         text: 'text-service-marketing',
