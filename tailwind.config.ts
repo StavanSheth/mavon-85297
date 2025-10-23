@@ -212,10 +212,6 @@ export default {
         "ripple": "ripple 0.6s ease-out",
         "pulse-text": "pulse-text 2s linear infinite",
         "particle-float": "particle-float 1.5s ease-out forwards",
-        "spin-slow": "spin 20s linear infinite",
-      },
-      scale: {
-        '108': '1.08',
       },
     },
   },
