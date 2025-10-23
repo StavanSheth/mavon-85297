@@ -16,20 +16,26 @@ const HeroOrbit = ({ liteMode }: HeroOrbitProps) => {
     {
       icon: Lightbulb,
       label: 'Innovation',
+      emoji: '💡',
       color: 'from-amber-400 to-yellow-500',
       shadowColor: 'shadow-amber-500/50',
+      description: 'Pioneering creative solutions',
     },
     {
       icon: Brain,
       label: 'Excellence',
+      emoji: '🧠',
       color: 'from-teal-400 to-cyan-500',
       shadowColor: 'shadow-teal-500/50',
+      description: 'Driven by technology & vision',
     },
     {
       icon: Palette,
       label: 'Creativity',
-      color: 'from-amber-400 to-golden-glow',
-      shadowColor: 'shadow-golden-glow/50',
+      emoji: '🎨',
+      color: 'from-pink-400 to-purple-500',
+      shadowColor: 'shadow-purple-500/50',
+      description: 'Transforming ideas into reality',
     },
   ];
 
@@ -93,7 +99,7 @@ const HeroOrbit = ({ liteMode }: HeroOrbitProps) => {
               <motion.div
                 className={`w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br ${orb.color} 
                            flex items-center justify-center shadow-lg ${orb.shadowColor}
-                           backdrop-blur-sm border border-white/20`}
+                           backdrop-blur-sm border-2 border-white/30`}
                 animate={
                   hoveredOrb === index
                     ? {
@@ -107,19 +113,31 @@ const HeroOrbit = ({ liteMode }: HeroOrbitProps) => {
                 }
                 transition={{ duration: 1, repeat: Infinity }}
               >
-                <Icon className="w-8 h-8 md:w-10 md:h-10 text-white" strokeWidth={2} />
+                <span className="text-3xl md:text-4xl">{orb.emoji}</span>
               </motion.div>
 
-              {/* Tooltip */}
+              {/* Label below icon */}
+              <motion.div
+                className="absolute top-full mt-3 left-1/2 -translate-x-1/2 whitespace-nowrap text-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+              >
+                <div className="text-xs md:text-sm font-semibold text-golden-glow">
+                  {orb.label}
+                </div>
+              </motion.div>
+
+              {/* Tooltip on hover */}
               {hoveredOrb === index && (
                 <motion.div
-                  className="absolute top-full mt-2 left-1/2 -translate-x-1/2 whitespace-nowrap"
+                  className="absolute top-full mt-12 left-1/2 -translate-x-1/2 whitespace-nowrap z-50"
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="px-3 py-1 rounded-lg glass-card text-sm text-golden-glow font-medium">
-                    {orb.label}
+                  <div className="px-4 py-2 rounded-lg glass-card text-sm text-foreground/90 border border-golden-glow/30">
+                    {orb.description}
                   </div>
                 </motion.div>
               )}

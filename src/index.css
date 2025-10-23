@@ -25,6 +25,14 @@ All colors MUST be HSL.
     /* Golden Glow Accent */
     --golden-glow: 45 100% 70%;        /* #ffd369 */
     --golden-glow-light: 45 100% 80%;
+    
+    /* Additional utility colors */
+    --teal: 175 60% 50%;
+    --teal-glow: 175 80% 70%;
+    --sky: 200 70% 55%;
+    --sky-glow: 200 90% 75%;
+    --violet: 270 60% 60%;
+    --violet-glow: 270 80% 80%;
 
     /* Service Category Colors */
     --service-software: 134 39% 46%;

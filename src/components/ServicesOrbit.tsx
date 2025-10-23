@@ -13,12 +13,12 @@ const ServicesOrbit = ({ liteMode, onServiceClick }: ServicesOrbitProps) => {
   const [rotation, setRotation] = useState(0);
 
   const services = [
-    { icon: Monitor, label: 'Web & Retail', id: 'software-web-retail', color: 'from-orange-400 to-amber-500' },
-    { icon: Smartphone, label: 'Mobile & AI', id: 'software-mobile-ai', color: 'from-blue-400 to-cyan-500' },
-    { icon: Database, label: 'DBMS', id: 'software-dbms', color: 'from-purple-400 to-pink-500' },
-    { icon: Cog, label: 'Automation', id: 'software-automation', color: 'from-teal-400 to-emerald-500' },
-    { icon: Palette, label: 'Digital Products', id: 'digital', color: 'from-green-400 to-lime-500' },
-    { icon: TrendingUp, label: 'Branding', id: 'branding', color: 'from-amber-400 to-golden-glow' },
+    { icon: Monitor, label: 'Web & Retail', emoji: '🌐', id: 'software-web-retail', color: 'from-orange-400 to-amber-500' },
+    { icon: Smartphone, label: 'Mobile & AI', emoji: '📱', id: 'software-mobile-ai', color: 'from-blue-400 to-cyan-500' },
+    { icon: Database, label: 'DBMS', emoji: '🧮', id: 'software-dbms', color: 'from-purple-400 to-pink-500' },
+    { icon: Cog, label: 'Automation', emoji: '⚙️', id: 'software-automation', color: 'from-teal-400 to-emerald-500' },
+    { icon: Palette, label: 'Digital Products', emoji: '🎆', id: 'digital', color: 'from-green-400 to-lime-500' },
+    { icon: TrendingUp, label: 'Branding', emoji: '✏️', id: 'branding', color: 'from-amber-400 to-golden-glow' },
   ];
 
   const angleStep = 360 / services.length;
@@ -78,7 +78,7 @@ const ServicesOrbit = ({ liteMode, onServiceClick }: ServicesOrbitProps) => {
             <motion.div
               className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br ${service.color}
                          flex items-center justify-center shadow-lg backdrop-blur-sm
-                         border-2 border-white/20 transition-all duration-300`}
+                         border-2 border-white/30 transition-all duration-300`}
               animate={
                 hoveredService === index && !liteMode
                   ? {
@@ -92,19 +92,31 @@ const ServicesOrbit = ({ liteMode, onServiceClick }: ServicesOrbitProps) => {
               }
               transition={{ duration: 1, repeat: Infinity }}
             >
-              <Icon className="w-10 h-10 md:w-12 md:h-12 text-white" strokeWidth={2} />
+              <span className="text-4xl md:text-5xl">{service.emoji}</span>
             </motion.div>
 
-            {/* Label */}
+            {/* Label below icon */}
+            <motion.div
+              className="absolute top-full mt-3 left-1/2 -translate-x-1/2 whitespace-nowrap text-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <div className="text-xs md:text-sm font-semibold text-golden-glow">
+                {service.label}
+              </div>
+            </motion.div>
+
+            {/* Tooltip on hover */}
             {hoveredService === index && (
               <motion.div
-                className="absolute top-full mt-2 left-1/2 -translate-x-1/2 whitespace-nowrap z-30"
+                className="absolute top-full mt-12 left-1/2 -translate-x-1/2 whitespace-nowrap z-30"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
               >
-                <div className="px-4 py-2 rounded-lg glass-card text-sm text-golden-glow font-semibold 
+                <div className="px-4 py-2 rounded-lg glass-card text-sm text-foreground/90 
                                shadow-lg border border-golden-glow/30">
-                  {service.label}
+                  Click to explore
                 </div>
               </motion.div>
             )}
