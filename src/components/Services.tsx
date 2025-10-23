@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import { Monitor, Smartphone, Database, Cog, Palette, PenTool, ChevronDown, TrendingUp } from 'lucide-react';
 import ServiceCard from './ServiceCard';
 import { servicesData } from '@/lib/servicesData';
+import ServicesOrbit from './ServicesOrbit';
+import { motion } from 'framer-motion';
 
 interface ServicesProps {
   liteMode: boolean;
@@ -186,14 +188,31 @@ const Services = ({ liteMode }: ServicesProps) => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in-up">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-holographic mb-4">
             Our Services
           </h2>
-          {<p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            {/* Comprehensive solutions powered by innovation and sustainability */}
-          </p> }
-        </div>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Explore our comprehensive technology solutions
+          </p>
+        </motion.div>
+
+        {/* Services Orbit Wheel */}
+        <motion.div
+          className="mb-20"
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <ServicesOrbit liteMode={liteMode} onServiceClick={handleCardClick} />
+        </motion.div>
 
         {/* Service Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">

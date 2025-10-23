@@ -8,19 +8,23 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* 🌲 Forest Theme - Mavon Design System (Balanced + More Image Visibility) */
+    /* 🌲 Futuristic Forest Theme - Mavon Design System */
 
-    /* Base Colors */
-    --background: 120 30% 10%;         /* darker base to make bright image pop more // changed */
-    --foreground: 127 50% 97%;         /* slightly brighter text // changed */
+    /* Base Colors - Deep Forest */
+    --background: 155 65% 8%;          /* Deep forest green #0e3926 */
+    --foreground: 127 15% 96%;         /* Bright text */
 
     /* Forest Palette */
-    --forest-deep: 120 35% 15%;        /* reduced darkness // changed */
-    --forest-canopy: 120 30% 22%;
-    --leaf-green: 127 45% 52%;
-    --leaf-light: 127 50% 68%;         /* more highlight for accents // changed */
+    --forest-deep: 155 65% 11%;        /* #0e3926 base */
+    --forest-canopy: 142 25% 42%;      /* #6ca16f sage */
+    --leaf-green: 142 25% 42%;         /* #6ca16f sage */
+    --leaf-light: 142 30% 55%;         /* Lighter sage */
     --earth-brown: 20 25% 28%;
     --mist: 0 0% 98%;
+    
+    /* Golden Glow Accent */
+    --golden-glow: 45 100% 70%;        /* #ffd369 */
+    --golden-glow-light: 45 100% 80%;
 
     /* Service Category Colors */
     --service-software: 134 39% 46%;
@@ -47,19 +51,19 @@ All colors MUST be HSL.
     --popover: 120 55% 12%;
     --popover-foreground: 127 53% 95%;
     
-    --primary: 127 53% 51%;
-    --primary-foreground: 120 70% 8%;
-    --primary-glow: 127 53% 68%;       /* stronger glow for contrast // changed */
+    --primary: 142 25% 42%;            /* Sage green */
+    --primary-foreground: 155 65% 8%;
+    --primary-glow: 142 30% 55%;
     
-    --secondary: 178 85% 38%;
-    --secondary-foreground: 0 0% 100%;
-    --secondary-glow: 178 85% 55%;
+    --secondary: 45 100% 70%;          /* Golden glow */
+    --secondary-foreground: 155 65% 8%;
+    --secondary-glow: 45 100% 80%;
     
     --muted: 120 30% 25%;
     --muted-foreground: 127 25% 75%;   /* slightly lighter muted text // changed */
     
-    --accent: 45 100% 70%;
-    --accent-foreground: 120 70% 13%;
+    --accent: 45 100% 70%;             /* Golden */
+    --accent-foreground: 155 65% 8%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -68,11 +72,11 @@ All colors MUST be HSL.
     --input: 120 30% 20%;
     --ring: 127 53% 51%;
     
-    /* Gradients (made overlays lighter to reveal more image) */
-    --gradient-forest: linear-gradient(180deg, hsl(120, 70%, 8% / 0.7) 0%, hsl(120, 45%, 18% / 0.5) 100%); /* changed */
-    --gradient-leaf: linear-gradient(135deg, hsl(127, 53%, 51%) 0%, hsl(178, 85%, 38%) 100%);
-    --gradient-glow: radial-gradient(circle, hsl(127, 53%, 51% / 0.15) 0%, transparent 70%); /* more transparent */
-    --gradient-holographic: linear-gradient(135deg, hsl(127, 53%, 51%) 0%, hsl(178, 85%, 38%) 25%, hsl(256, 92%, 76%) 50%, hsl(201, 100%, 74%) 75%, hsl(45, 100%, 70%) 100%);
+    /* Gradients */
+    --gradient-forest: linear-gradient(180deg, hsl(155, 65%, 8% / 0.9) 0%, hsl(155, 65%, 11% / 0.7) 100%);
+    --gradient-leaf: linear-gradient(135deg, hsl(142, 25%, 42%) 0%, hsl(45, 100%, 70%) 100%);
+    --gradient-glow: radial-gradient(circle, hsl(45, 100%, 70% / 0.2) 0%, transparent 70%);
+    --gradient-holographic: linear-gradient(135deg, hsl(142, 25%, 42%) 0%, hsl(45, 100%, 70%) 50%, hsl(142, 30%, 55%) 100%);
     
     /* Section Background */
     --gradient-services-bg: linear-gradient(160deg, hsl(127, 45%, 96%) 0%, hsl(145, 55%, 92%) 100%);

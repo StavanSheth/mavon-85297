@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
@@ -6,8 +6,9 @@ import Solutions from '@/components/Solutions';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 import FloatingMascot from '@/components/FloatingMascot';
-import FireflyCursor from '@/components/FireflyCursor';
+import MagneticCursor from '@/components/MagneticCursor';
 import { Navigation } from '@/components/Navigation';
+import { motion } from 'framer-motion';
 
 const Index = () => {
   const [liteModeEnabled, setLiteModeEnabled] = useState(false);
@@ -20,9 +21,9 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background relative overflow-x-hidden cursor-firefly">
-      {/* Firefly cursor effect */}
-      {!liteModeEnabled && <FireflyCursor />}
+    <div className="min-h-screen bg-background relative overflow-x-hidden">
+      {/* Magnetic cursor effect */}
+      {!liteModeEnabled && <MagneticCursor />}
 
       {/* Floating Mascot */}
       {!liteModeEnabled && <FloatingMascot />}
@@ -65,11 +66,34 @@ const Index = () => {
       </button>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-border/50">
-        <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>&copy; 2025 Mavon. Moving Innovation Forward.</p>
+      <motion.footer 
+        className="py-12 border-t border-border/50 relative overflow-hidden"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-forest-deep/50" />
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <motion.div
+            className="inline-flex items-center gap-2 mb-4"
+            animate={!liteModeEnabled ? {
+              textShadow: [
+                '0 0 10px rgba(255,211,105,0.3)',
+                '0 0 20px rgba(255,211,105,0.5)',
+                '0 0 10px rgba(255,211,105,0.3)',
+              ],
+            } : {}}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <span className="text-2xl">🌿</span>
+            <p className="text-golden-glow font-medium">&copy; 2025 Mavon</p>
+            <span className="text-2xl">🌿</span>
+          </motion.div>
+          <p className="text-muted-foreground">Moving Innovation Forward Sustainably</p>
         </div>
-      </footer>
+      </motion.footer>
     </div>
   );
 };
