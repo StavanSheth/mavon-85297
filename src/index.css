@@ -39,6 +39,19 @@ All colors MUST be HSL.
     --service-marketing-glow: 36 100% 75%;
     --service-marketing-accent: 22 100% 45%;
 
+    /* Section Theme Colors - Orange, Blue, Purple */
+    --orange: 25 95% 53%;
+    --orange-light: 25 100% 75%;
+    --orange-glow: 25 100% 85%;
+    
+    --blue: 217 91% 60%;
+    --blue-light: 217 100% 75%;
+    --blue-glow: 217 100% 85%;
+    
+    --purple: 271 76% 53%;
+    --purple-light: 271 100% 75%;
+    --purple-glow: 271 100% 85%;
+
     /* Semantic Colors */
     --card: 120 45% 15%;
     --card-foreground: 127 53% 95%;
