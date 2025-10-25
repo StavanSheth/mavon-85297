@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { HashLink as Link } from "react-router-hash-link";
-import logo from "./assets/logo.png"; // 🧩 ensure logo exists here
+import logo from "./assets/mavon-logo.jpg"; // 🧩 ensure logo exists here
 
 // ✅ HERO SECTION
 const Hero: React.FC = () => {
