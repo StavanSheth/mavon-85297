@@ -1,13 +1,95 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles, Lightbulb, Star } from 'lucide-react';
+import { motion } from 'framer-motion';
 import heroForest from '@/assets/hero-forest.jpg';
+import mavonLogo from '@/assets/mavon-logo.jpg';
 
 interface HeroProps {
   onScrollToServices: () => void;
   liteMode: boolean;
 }
 
+const RevolvingIcon = ({ 
+  emoji, 
+  label, 
+  angle, 
+  onClick 
+}: { 
+  emoji: string; 
+  label: string; 
+  angle: number; 
+  onClick: () => void;
+}) => {
+  const radius = 140;
+
+  return (
+    <motion.div
+      className="absolute cursor-pointer z-30"
+      style={{
+        left: '50%',
+        top: '50%',
+      }}
+      animate={{
+        x: Math.cos((angle * Math.PI) / 180) * radius - 30,
+        y: Math.sin((angle * Math.PI) / 180) * radius - 30,
+        rotate: 360,
+      }}
+      transition={{
+        rotate: {
+          duration: 20,
+          repeat: Infinity,
+          ease: 'linear',
+        },
+        x: {
+          duration: 20,
+          repeat: Infinity,
+          ease: 'linear',
+        },
+        y: {
+          duration: 20,
+          repeat: Infinity,
+          ease: 'linear',
+        },
+      }}
+      onClick={onClick}
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.9 }}
+    >
+      <div className="relative">
+        <div className="w-16 h-16 rounded-full glass-card flex items-center justify-center text-3xl hover:glow-strong transition-all">
+          {emoji}
+        </div>
+        <motion.div
+          className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs font-medium text-leaf-light"
+          animate={{ rotate: -360 }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: 'linear',
+          }}
+        >
+          {label}
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+};
+
 const Hero = ({ onScrollToServices, liteMode }: HeroProps) => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const icons = [
+    { emoji: '💡', label: 'Solutions', section: 'solutions', angle: 0 },
+    { emoji: '🧰', label: 'Services', section: 'services', angle: 90 },
+    { emoji: '👥', label: 'About', section: 'about', angle: 180 },
+    { emoji: '📞', label: 'Contact', section: 'contact', angle: 270 },
+  ];
+
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -54,6 +136,29 @@ const Hero = ({ onScrollToServices, liteMode }: HeroProps) => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 animate-scale-in">
             <Sparkles className="text-leaf" size={16} />
             <span className="text-sm text-leaf-light font-medium">Technology Solutions</span>
+          </div>
+
+          {/* Mavon Logo with Revolving Icons */}
+          <div className="relative w-48 h-48 mx-auto mb-8">
+            <motion.div
+              className="w-full h-full rounded-full overflow-hidden border-4 border-primary glow-strong relative z-20"
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
+              <img src={mavonLogo} alt="Mavon Logo" className="w-full h-full object-cover" />
+            </motion.div>
+
+            {/* Revolving Icons */}
+            {icons.map((icon) => (
+              <RevolvingIcon
+                key={icon.section}
+                emoji={icon.emoji}
+                label={icon.label}
+                angle={icon.angle}
+                onClick={() => scrollToSection(icon.section)}
+              />
+            ))}
           </div>
 
           {/* Main Heading */}
