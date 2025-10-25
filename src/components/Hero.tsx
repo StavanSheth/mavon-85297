@@ -1,8 +1,6 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, Lightbulb, Star } from 'lucide-react';
 import heroForest from '@/assets/hero-forest.jpg';
-import HeroOrbit from './HeroOrbit';
-import { motion } from 'framer-motion';
 
 interface HeroProps {
   onScrollToServices: () => void;
@@ -50,65 +48,36 @@ const Hero = ({ onScrollToServices, liteMode }: HeroProps) => {
       )}
 
       {/* Content */}
-      <div className="relative z-20 container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+      <div className="relative z-20 container mx-auto px-4 text-center">
+        <div className="max-w-4xl mx-auto animate-fade-in-up">
           {/* Badge */}
-          <motion.div 
-            className="flex justify-center mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card">
-              <Sparkles className="text-golden-glow" size={16} />
-              <span className="text-sm text-golden-glow font-medium">Sustainable Technology Solutions</span>
-            </div>
-          </motion.div>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 animate-scale-in">
+            <Sparkles className="text-leaf" size={16} />
+            <span className="text-sm text-leaf-light font-medium">Technology Solutions</span>
+          </div>
 
           {/* Main Heading */}
-          <motion.h1 
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-holographic text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-holographic animate-fade-in">
             Moving Innovation Forward
-          </motion.h1>
+          </h1>
 
           {/* Subheading */}
-          <motion.p
-            className="text-lg md:text-xl text-center text-foreground/90 mb-12 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <p
+            className="text-xl md:text-2xl text-foreground/90 mb-8 max-w-2xl mx-auto animate-fade-in"
+            style={{ animationDelay: '0.1s' }}
           >
-            Futuristic software solutions that merge nature and technology
-          </motion.p>
-
-          {/* Hero Orbit Animation */}
-          <motion.div
-            className="mb-12"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            <HeroOrbit liteMode={liteMode} />
-          </motion.div>
+            Futuristic software solutions
+          </p>
 
           {/* CTA Buttons */}
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+          <div
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in"
+            style={{ animationDelay: '0.2s' }}
           >
             <Button
               size="lg"
               onClick={onScrollToServices}
-              className="bg-gradient-to-r from-leaf-green to-golden-glow hover:from-golden-glow hover:to-leaf-green 
-                         text-background font-semibold px-8 py-6 text-lg rounded-xl 
-                         shadow-[0_0_30px_rgba(108,161,111,0.4)] hover:shadow-[0_0_50px_rgba(255,211,105,0.6)]
-                         transition-all duration-300 group"
+              className="bg-primary hover:bg-primary-glow text-primary-foreground font-semibold px-8 py-6 text-lg rounded-xl hover-tilt glow group"
             >
               Explore Services
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -117,12 +86,36 @@ const Hero = ({ onScrollToServices, liteMode }: HeroProps) => {
               size="lg"
               variant="outline"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="glass-card hover:glow px-8 py-6 text-lg rounded-xl border-2 border-golden-glow/30
-                         hover:border-golden-glow text-golden-glow hover:text-golden-glow transition-all duration-300"
+              className="glass-card hover:glow px-8 py-6 text-lg rounded-xl hover-tilt"
             >
               Get in Touch
             </Button>
-          </motion.div>
+          </div>
+
+          {/* Stats / Icons */}
+          <div
+            className="grid grid-cols-3 gap-8 mt-20 max-w-3xl mx-auto animate-fade-in"
+            style={{ animationDelay: '0.3s' }}
+          >
+            {[
+              { icon: <Lightbulb size={60} className="text-holographic" />, label: 'Innovation     ' },
+              { icon: <Star size={60} className="text-holographic" />, label: 'Excellence    ' },
+              { icon: <Sparkles size={60} className="text-holographic" />, label: 'Creativity    ' },
+            ].map((stat, index) => (
+              <div
+                key={index}
+                className="glass-card rounded-xl p-6 hover-tilt transition transform hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,255,0.4)]"
+              >
+                {/* Icon */}
+                <div className="flex justify-center mb-2 transition-all duration-300">
+                  {stat.icon}
+                </div>
+
+                {/* Label */}
+                <div className="text-sm text-muted-foreground text-center">{stat.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
