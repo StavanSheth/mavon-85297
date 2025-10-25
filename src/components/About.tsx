@@ -1,4 +1,5 @@
 import { Target, Users, Leaf, Award } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface AboutProps {
   liteMode: boolean;
@@ -38,14 +39,20 @@ const About = ({ liteMode }: AboutProps) => {
 
   return (
     <div className="container mx-auto px-4">
-      <div className="text-center mb-16">
+      <motion.div 
+        className="text-center mb-16"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <h2 className="text-4xl md:text-5xl font-bold text-holographic mb-4">
           About Mavon
         </h2>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Moving Innovation Forward with sustainable technology solutions
+          Moving Innovation Forward Sustainably
         </p>
-      </div>
+      </motion.div>
 
       <div className="max-w-4xl mx-auto mb-16">
         <div className="glass-card p-8 rounded-2xl">
@@ -65,14 +72,23 @@ const About = ({ liteMode }: AboutProps) => {
         {values.map((value, index) => {
           const Icon = value.icon;
           return (
-            <div
+            <motion.div
               key={index}
-              className="glass-card p-6 rounded-xl hover:glow-medium transition-all duration-300 group"
+              className="glass-card p-6 rounded-xl hover:glow-medium transition-all duration-300 group cursor-pointer"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -8, scale: 1.02 }}
             >
               <div className="flex items-start gap-4">
-                <div className={`p-3 rounded-lg ${value.bgColor} group-hover:scale-110 transition-all flex-shrink-0`}>
+                <motion.div 
+                  className={`p-3 rounded-lg ${value.bgColor} flex-shrink-0`}
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                >
                   <Icon className={`w-6 h-6 ${value.color}`} />
-                </div>
+                </motion.div>
                 <div>
                   <h3 className="text-xl font-bold text-foreground mb-2">
                     {value.title}
@@ -82,7 +98,7 @@ const About = ({ liteMode }: AboutProps) => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>
