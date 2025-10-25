@@ -47,8 +47,8 @@ const Contact = ({ liteMode }: ContactProps) => {
           <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
             <div className="glass-card rounded-xl p-6 hover-tilt">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0">
-                 <MessageSquare className="text-blue-500" size={24} />
+                <div className="w-12 h-12 rounded-lg bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                  <MessageSquare className="text-emerald-500" size={24} />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Contact Us</h3>
@@ -67,9 +67,9 @@ const Contact = ({ liteMode }: ContactProps) => {
           <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <div className="glass-card rounded-xl p-6 hover-tilt">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-purple-600/20 flex items-center justify-center flex-shrink-0">
-                  <Instagram className="text-purple-600" size={24} />
-                 </div>
+                <div className="w-12 h-12 rounded-lg bg-pink-600/20 flex items-center justify-center flex-shrink-0">
+                  <Instagram className="text-pink-600" size={24} />
+                </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Follow Us</h3>
                   <p className="text-muted-foreground">
@@ -77,8 +77,8 @@ const Contact = ({ liteMode }: ContactProps) => {
                       href="https://www.instagram.com/_mavon_?igsh=MWl3MmpmbHoyenB5"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-purple-600 hover:underline"
-                      >
+                      className="hover:underline"
+                    >
                       @_mavon_
                     </a>
                   </p>
