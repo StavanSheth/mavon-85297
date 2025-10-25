@@ -23,8 +23,8 @@ const Contact = ({ liteMode }: ContactProps) => {
           <div className="animate-fade-in">
             <div className="glass-card rounded-xl p-6 hover-tilt">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-sky-500/20 flex items-center justify-center flex-shrink-0">
-                  <Mail className="text-sky-500" size={24} />
+                <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center flex-shrink-0">
+                  <Mail className="text-orange-500" size={24} />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Email Us</h3>
